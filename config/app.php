@@ -123,8 +123,6 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'log' => 'daily',
-
     'order_ttl' => 1800,
 
     /*
