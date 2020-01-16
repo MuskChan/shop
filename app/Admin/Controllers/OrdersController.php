@@ -138,7 +138,7 @@ class OrdersController extends AdminController
             throw new InvalidRequestException('该订单未付款');
         }
         // 判断当前订单发货状态是否为未发货
-        if (!$order->ship_status !== Order::SHIP_STATUS_PENDING) {
+        if ($order->ship_status !== Order::SHIP_STATUS_PENDING) {
             throw new InvalidRequestException('该订单已发货');
         }
         $data = $this->validate($request, [
